@@ -1,9 +1,10 @@
+# Plugins
+plugins=(git)
+
+# Zsh config
 export ZSH=/Users/ilja/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 source /Users/ilja/.bash_profile
-
-# Plugins
-plugins=(git)
 
 # Prompt
 PROMPT='$fg[yellow]%1d $(git_prompt_info) $reset_color→ '
