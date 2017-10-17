@@ -29,6 +29,8 @@ function git_prompt_info() {
 # Git aliases
 alias gf='git fetch'
 alias gs='git status'
+alias gst='git stash'
+alias gstp='git stash pop'
 alias gp='git push'
 alias gpr='git pull -r'
 alias gri='git rebase -i'
