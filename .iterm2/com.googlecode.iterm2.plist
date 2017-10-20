@@ -482,7 +482,7 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>796 96 578 196 0 0 1440 877 </string>
+	<string>796 64 578 265 0 0 1440 877 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
 	<string>888 426 400 129 0 0 1440 877 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
@@ -492,7 +492,7 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>269 483 918 394 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 10 1438 867 0 0 1440 877 </string>
+	<string>0 4 1440 873 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>0 425 570 452 0 0 1440 877 </string>
 	<key>New Bookmarks</key>
@@ -1190,7 +1190,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-10-16T07:19:05Z</date>
+	<date>2017-10-18T08:23:44Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>

@@ -25,13 +25,3 @@ function git_prompt_info() {
   fi
   echo "$(parse_git_dirty)$ZSH_THEME_GIT_PROMPT_PREFIX$(current_branch)$ZSH_THEME_GIT_PROMPT_SUFFIX"
 }
-
-# Git aliases
-alias gf='git fetch'
-alias gs='git status'
-alias gst='git stash'
-alias gstp='git stash pop'
-alias gp='git push'
-alias gpr='git pull -r'
-alias gri='git rebase -i'
-alias grc='git rebase --continue'
