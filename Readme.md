@@ -16,3 +16,4 @@ brew cask install intellij-idea
 git init .
 git remote add origin https://github.com/ikempf/.dotfiles.git
 git pull origin master
+
