@@ -9,11 +9,11 @@ if [ -f /$HOME/.bash_profile ]; then
 fi
 
 # Prompt
-PROMPT='$fg[yellow]%1d $(git_prompt_info) $reset_color→ '
+PROMPT='%{$fg[yellow]%}%1d $(git_prompt_info) %{$reset_color%}→ '
 ZSH_THEME_GIT_PROMPT_PREFIX="[git:"
-ZSH_THEME_GIT_PROMPT_SUFFIX="]$reset_color"
-ZSH_THEME_GIT_PROMPT_DIRTY="$fg[red]+"
-ZSH_THEME_GIT_PROMPT_CLEAN="$fg[green]"
+ZSH_THEME_GIT_PROMPT_SUFFIX="]"
+ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[red]+%}"
+ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[green]%}"
 
 function git_prompt_info() {
   if ! (git symbolic-ref HEAD >/dev/null 2>&1); then
