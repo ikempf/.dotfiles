@@ -9,7 +9,7 @@ if [ -f /$HOME/.bash_profile ]; then
 fi
 
 # Prompt
-PROMPT='%{$fg[yellow]%}%1d $(git_prompt_info) %{$reset_color%}→ '
+PROMPT='%{$fg[yellow]%}%1d$(git_prompt_info)%{$reset_color%} → '
 ZSH_THEME_GIT_PROMPT_PREFIX="[git:"
 ZSH_THEME_GIT_PROMPT_SUFFIX="]"
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[red]+%}"
@@ -25,5 +25,5 @@ function git_prompt_info() {
   if [ "$PWD" = "$HOME" ]; then
     return
   fi
-  echo "$(parse_git_dirty)$ZSH_THEME_GIT_PROMPT_PREFIX$(current_branch)$ZSH_THEME_GIT_PROMPT_SUFFIX"
+  echo " $(parse_git_dirty)$ZSH_THEME_GIT_PROMPT_PREFIX$(current_branch)$ZSH_THEME_GIT_PROMPT_SUFFIX"
 }
