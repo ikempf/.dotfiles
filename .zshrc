@@ -9,13 +9,21 @@ if [ -f /$HOME/.bash_profile ]; then
 fi
 
 # Prompt
-PROMPT='%{$fg[yellow]%}%1d$(git_prompt_info)%{$reset_color%} → '
-ZSH_THEME_GIT_PROMPT_PREFIX="[git:"
-ZSH_THEME_GIT_PROMPT_SUFFIX="]"
-ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[red]+%}"
-ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[green]%}"
+green="%{$fg[green]%}"
+red="%{$fg[red]%}"
+reset="%{$reset_color%}"
 
-function git_prompt_info() {
+PROMPT='%{$fg[yellow]%}%1d$(custom_git_prompt_info)$reset → '
+ZSH_THEME_GIT_PROMPT_PREFIX="["
+ZSH_THEME_GIT_PROMPT_SUFFIX="]$reset"
+ZSH_THEME_GIT_PROMPT_DIRTY=$red
+ZSH_THEME_GIT_PROMPT_CLEAN=$green
+ZSH_THEME_GIT_COMMITS_AHEAD_PREFIX="$green ▲"
+ZSH_THEME_GIT_COMMITS_AHEAD_SUFFIX=$reset
+ZSH_THEME_GIT_COMMITS_BEHIND_PREFIX="${red} ▼"
+ZSH_THEME_GIT_COMMITS_AHEAD_SUFFIX=$reset
+
+function custom_git_prompt_info() {
   if ! (git symbolic-ref HEAD >/dev/null 2>&1); then
     return
   fi
@@ -25,5 +33,9 @@ function git_prompt_info() {
   if [ "$PWD" = "$HOME" ]; then
     return
   fi
-  echo " $(parse_git_dirty)$ZSH_THEME_GIT_PROMPT_PREFIX$(current_branch)$ZSH_THEME_GIT_PROMPT_SUFFIX"
+  echo " $(parse_git_dirty)$ZSH_THEME_GIT_PROMPT_PREFIX$(current_branch)$(git_prompt_status)$(git_commits_ahead)$(git_commits_behind)$(parse_git_dirty)$ZSH_THEME_GIT_PROMPT_SUFFIX"
 }
+
+
+
+export PATH=/Users/ilja/.local/bin:$PATH
