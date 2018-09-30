@@ -36,6 +36,4 @@ function custom_git_prompt_info() {
   echo " $(parse_git_dirty)$ZSH_THEME_GIT_PROMPT_PREFIX$(current_branch)$(git_prompt_status)$(git_commits_ahead)$(git_commits_behind)$(parse_git_dirty)$ZSH_THEME_GIT_PROMPT_SUFFIX"
 }
 
-
-
-export PATH=/Users/ilja/.local/bin:$PATH
+export PATH="/usr/local/bin:${PATH}"
