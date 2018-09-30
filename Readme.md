@@ -21,7 +21,7 @@ brew cask install java
 brew install scala
 brew install sbt
 
-brew cask install node
+brew install node
 
 brew install telnet
 ```
