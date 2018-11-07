@@ -25,7 +25,12 @@ brew install sbt
 brew install node
 
 brew install telnet
+
+brew install bat
+brew install ag
+brew install htop
 ```
+
 
 ## Dev tools
 ```
