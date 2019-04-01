@@ -37,3 +37,6 @@ function custom_git_prompt_info() {
 }
 
 export PATH="/usr/local/bin:${PATH}"
+
+export LANG=en_US
+

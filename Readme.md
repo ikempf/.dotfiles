@@ -31,7 +31,6 @@ brew install ag
 brew install htop
 ```
 
-
 ## Dev tools
 ```
 brew cask install iterm2
@@ -42,6 +41,7 @@ brew cask install intellij-idea
 ## Apps
 ```
 brew cask install spectacle
+brew cask install keyboard-maestro
 brew cask install google-chrome
 brew cask install caffeine
 brew cask install flux
