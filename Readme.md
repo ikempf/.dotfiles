@@ -41,10 +41,16 @@ brew cask install intellij-idea
 ## Apps
 ```
 brew cask install spectacle
-brew cask install keyboard-maestro
 brew cask install google-chrome
 brew cask install caffeine
 brew cask install flux
+brew cask install hammerspoon
+```
+
+# Security
+```
+brew cask install avast-security
+brew cask install icefloor
 ```
 
 # Checkout this repo's dotfiles
@@ -53,4 +59,5 @@ git init .
 git remote add origin https://github.com/ikempf/.dotfiles.git
 git pull origin master
 git branch --set-upstream-to=origin/master master
-````
+```
+
