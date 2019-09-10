@@ -36,6 +36,12 @@ brew cask install font-hack
 brew cask install intellij-idea
 ```
 
+## Vim
+```
+Install vim-plug
+
+```
+
 ## Apps
 ```
 brew cask install spectacle

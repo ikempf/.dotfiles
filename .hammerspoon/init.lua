@@ -1,3 +1,4 @@
+-- Spaces and Desktop shortcuts
 hs.hotkey.bind({"ctrl", "cmd"}, "pad1", function()
   focusScreen(1)
 end)
@@ -32,6 +33,7 @@ end)
 
 function circleTowards(increment)
   local screen = hs.window.focusedWindow():screen()
+  hs.console
   local index  = find(screen)
   circleIndex(index + increment)
 end
@@ -44,7 +46,8 @@ function circleIndex(index)
   elseif next > size then
     next = 1
   end
-  focusScreen(next)end
+  focusScreen(next)
+end
 
 function find(screen)
   local index=-1
@@ -77,3 +80,5 @@ function centerClick(screen)
   --hs.mouse.setAbsolutePosition(center)
   hs.eventtap.leftClick(center)
 end
+
+
