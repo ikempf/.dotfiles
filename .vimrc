@@ -15,6 +15,7 @@ set wrap!
 call plug#begin('~/.vim/plugged')
 
 Plug 'derekwyatt/vim-scala'
+Plug 'junegunn/goyo.vim'
 
 call plug#end()
 

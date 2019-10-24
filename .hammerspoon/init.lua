@@ -1,41 +1,53 @@
 -- Spaces and Desktop shortcuts
+-- Screen indexes might not correspond to "physical" order
+screenMapping = { [1] = 1, [2] = 3, [3] = 2 }
+function screen(index) 
+    return screenMapping[index]
+end
+
 hs.hotkey.bind({"ctrl", "cmd"}, "pad1", function()
-  focusScreen(1)
+  focusScreen(screen(1))
 end)
 
 hs.hotkey.bind({"ctrl", "cmd"}, '1', function()
-  focusScreen(1)
+  focusScreen(screen(1))
 end)
 
 hs.hotkey.bind({"ctrl", "cmd"}, "pad2", function()
-  focusScreen(3)
+  focusScreen(screen(3))
 end)
 
 hs.hotkey.bind({"ctrl", "cmd"}, '2', function()
-  focusScreen(3)
+  focusScreen(screen(3))
 end)
 
 hs.hotkey.bind({"ctrl", "cmd"}, "pad3", function()
-  focusScreen(2)
+  focusScreen(screen(2))
 end)
 
 hs.hotkey.bind({"ctrl", "cmd"}, '3', function()
-  focusScreen(2)
+  focusScreen(screen(2))
 end)
 
 hs.hotkey.bind({"ctrl", "cmd"}, "h", function()
-  circleTowards(1)
+  moveScreen(-1)
 end)
 
 hs.hotkey.bind({"ctrl", "cmd"}, "l", function()
-  circleTowards(-1)
+  moveScreen(1)
 end)
 
-function circleTowards(increment)
+function moveScreen(increment)
   local screen = hs.window.focusedWindow():screen()
-  hs.console
   local index  = find(screen)
-  circleIndex(index + increment)
+  local next   = boundedIndex(index + increment)
+  focusScreen(next)
+end
+
+function boundedIndex(index)
+  local size = length(hs.screen.allScreens())
+  local next = math.max(1, math.min(size, index))
+  return next
 end
 
 function circleIndex(index)
@@ -46,7 +58,7 @@ function circleIndex(index)
   elseif next > size then
     next = 1
   end
-  focusScreen(next)
+  return next
 end
 
 function find(screen)
@@ -56,7 +68,7 @@ function find(screen)
       index = k
     end
   end
-  return index
+  return screenMapping[index]
 end
 
 function length(table)
@@ -69,15 +81,13 @@ end
 
 function focusScreen(index)
   local screens = hs.screen.allScreens()
-  local screen = screens[index]
-  --hs.notify.new({title="Hammerspoon", informativeText="Focus " .. index}):send()
+  local screen = screens[screenMapping[index]]
   centerClick(screen)
 end
 
 function centerClick(screen)
   local rect = screen:fullFrame()
   local center = hs.geometry.rectMidPoint(rect)
-  --hs.mouse.setAbsolutePosition(center)
   hs.eventtap.leftClick(center)
 end
 
