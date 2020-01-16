@@ -54,7 +54,7 @@ brew cask install icefloor
 # Checkout this repo's dotfiles
 ```
 git init .
-git remote add origin https://github.com/ikempf/.dotfiles.git
+git remote add origin git@github.com:ikempf/.dotfiles.git
 git pull origin master
 git branch --set-upstream-to=origin/master master
 ```
