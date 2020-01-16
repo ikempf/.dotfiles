@@ -22,8 +22,6 @@ brew cask install java
 brew install scala
 brew install sbt
 
-brew install node
-
 brew install telnet
 
 brew install bat
@@ -61,3 +59,5 @@ git pull origin master
 git branch --set-upstream-to=origin/master master
 ```
 
+# Other configs
+Mission control, move left/right a space
