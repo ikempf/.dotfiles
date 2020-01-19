@@ -37,6 +37,10 @@ hs.hotkey.bind({"ctrl", "cmd"}, "l", function()
   moveScreen(1)
 end)
 
+hs.hotkey.bind({"ctrl", "alt", "cmd"}, "n", function()
+  centerClick(hs.screen.mainScreen())
+end)
+
 function moveScreen(increment)
   local screen = hs.window.focusedWindow():screen()
   local index  = find(screen)
