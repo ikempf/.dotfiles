@@ -39,14 +39,14 @@ brew cask install intellij-idea
 ## Vim
 ```
 Install vim-plug
-
 ```
 
 ## Apps
 ```
 #brew cask install spectacle
 #brew cask install hammerspoon
-brew cask install slate
+brew cask install macmediakeyforwarder
+brew cask install mtmr
 brew cask install google-chrome
 brew cask install caffeine
 brew cask install flux
