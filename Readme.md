@@ -33,6 +33,8 @@ brew install htop
 ```
 brew cask install iterm2
 brew cask install font-hack
+brew cask install font-hasklig
+brew cask install font-fira-code
 brew cask install intellij-idea
 ```
 
