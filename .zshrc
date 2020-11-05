@@ -40,3 +40,18 @@ export PATH="/usr/local/bin:${PATH}"
 
 export LANG=en_US
 
+# Docker
+alias dockerContainerRemove='docker rm -f $(docker ps -a -q)'
+alias dockerImageRemove='docker rmi -f $(docker images -q)'
+alias dockerVolumeRemove='docker volume prune -f'
+alias dockerRemove='dockerContainerRemove && dockerVolumeRemove'
+
+# Crap SBT
+alias sbtClean='rm -rf target;rm -rf project/target; rm -rf project/project/target'
+
+# Java
+alias J13='export JAVA_HOME=/Library/Java/JavaVirtualMachines/openjdk-13.0.1.jdk/Contents/Home'
+alias J12='export JAVA_HOME=/Library/Java/JavaVirtualMachines/openjdk-12.0.1.jdk/Contents/Home'
+alias J11='export JAVA_HOME=/Library/Java/JavaVirtualMachines/openjdk-11.0.2.jdk/Contents/Home'
+alias J8='export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home'
+J11
