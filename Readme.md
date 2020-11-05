@@ -17,6 +17,7 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 ## Cli tools
 ```
 brew install git
+brew install tldr
 
 brew cask install java
 brew install scala
