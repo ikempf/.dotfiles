@@ -1,7 +1,19 @@
 -- Spaces and Desktop shortcuts
 -- Screen indexes might not correspond to "physical" order
-screenMapping = { [1] = 1, [2] = 3, [3] = 2 }
-function screen(index) 
+
+print(io.open(os.getenv( "HOME" ) .. "/.hammerspoon/setup", "r"))
+setupFile = io.open(os.getenv( "HOME" ) .. "/.hammerspoon/setup", "r")
+setup = setupFile:read("*all")
+print("Current setup ".. setup)
+if setup == "UPPLY" then
+  screenMapping = { [1] = 1, [2] = 2, [3] = 3 }
+else 
+  screenMapping = { [1] = 3, [2] = 2, [3] = 1 }
+end
+
+hs.ipc.cliInstall()
+
+function screen(index)
     return screenMapping[index]
 end
 
@@ -44,6 +56,7 @@ end)
 function moveScreen(increment)
   local screen = hs.window.focusedWindow():screen()
   local index  = find(screen)
+  print("Focused screen " .. index)
   local next   = boundedIndex(index + increment)
   focusScreen(next)
 end
@@ -86,12 +99,14 @@ end
 function focusScreen(index)
   local screens = hs.screen.allScreens()
   local screen = screens[screenMapping[index]]
+  print("Changing screen " .. screenMapping[index])
   centerClick(screen)
 end
 
 function centerClick(screen)
   local rect = screen:fullFrame()
   local center = hs.geometry.rectMidPoint(rect)
+  hs.mouse.absolutePosition(center)
   hs.eventtap.leftClick(center)
 end
 

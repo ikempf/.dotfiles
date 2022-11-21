@@ -1,0 +1,19 @@
+ctrl + alt + cmd - r : brew services restart skhd ; brew services restart yabai
+ctrl + alt + cmd - s : brew services stop skhd ; brew services stop yabai
+
+
+# Hammerspoon
+ctrl + alt + cmd - 1 : echo -n HOME > ~/.hammerspoon/setup ; hs -c "hs.reload()"
+ctrl + alt + cmd - 2 : echo -n UPPLY > ~/.hammerspoon/setup ; hs -c "hs.reload()"
+
+# Yabai
+## Layout toggle
+ctrl + alt + cmd - space : yabai -m space --layout "$(yabai -m query --spaces --space | jq -r 'if .type == "bsp" then "stack" else "bsp" end')"
+
+## Window focus
+ctrl + alt + cmd - j: yabai -m window --focus prev || yabai -m window --focus stack.prev
+ctrl + alt + cmd - k: yabai -m window --focus next || yabai -m window --focus stack.next
+
+## Window/screen focusasdf
+ctrl + cmd - h: yabai -m window --focus $(yabai -m query --spaces --display prev | jq '.[] | select(."is-visible" == true) | ."last-window"') || yabai -m display --focus prev
+ctrl + cmd - l: yabai -m window --focus $(yabai -m query --spaces --display next | jq '.[] | select(."is-visible" == true) | ."first-window"') || yabai -m display --focus next

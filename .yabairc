@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+# Mouse focus
+yabai -m config mouse_follows_focus on
+yabai -m config focus_follows_mouse autoraise
+
+# Space assignments
+#yabai -m rule --add app="^Microsoft Teams$" space=1
+#yabai -m rule --add app="^Google Chrome|Firefox|Safari$" space=2
+#yabai -m rule --add app="^IntelliJ IDEA$" space=3
+
+# Layouts
+yabai -m config layout stack

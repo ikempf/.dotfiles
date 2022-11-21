@@ -1,0 +1,152 @@
+# Layouts
+layouts:
+  - fullscreen
+  - column
+
+# Mouse focus
+mouse-follows-focus: true
+focus-follows-mouse: true
+
+# Window margins
+window-margins: true
+window-margin-size: 0
+screen-padding-left: 0
+screen-padding-right: 0
+screen-padding-top: 0
+screen-padding-bottom: 0
+
+# Shortcuts
+mod1:
+  - control
+  - option
+  - command
+mod2:
+  - control
+  - command
+
+cycle-layout:
+  mod: mod1
+  key: "space"
+
+focus-ccw:
+  mod: mod1
+  key: j
+focus-cw:
+  mod: mod1
+  key: k
+focus-screen-ccw:
+  mod: mod1
+  key: u
+focus-screen-cw:
+  mod: mod1
+  key: i
+
+swap-screen-ccw:
+  mod: mod2
+  key: h
+swap-screen-cw:
+  mod: mod2
+  key: l
+swap-ccw:
+  mod: mod2
+  key: j
+swap-cw:
+  mod: mod2
+  key: k
+
+# Swap the position of the currently focused window with the main window in the list.
+swap-main:
+  mod: mod1
+  key: "enter"
+
+# Move the currently focused window to the space to the left.
+throw-space-left:
+  mod: mod2
+  key: "left"
+
+# Move currently the focused window to the space to the right.
+throw-space-right:
+  mod: mod2
+  key: "right"
+
+# Toggle the floating state of the currently focused window; i.e., if it was floating make it tiled and if it was tiled make it floating.
+toggle-float:
+  mod: mod1
+  key: t
+
+# Display the layout HUD with the current layout on each screen.
+display-current-layout:
+  mod: mod1
+  key: i
+
+# Turn on or off tiling entirely.
+toggle-tiling:
+  mod: mod1
+  key: t
+
+# Rerun the current layout's algorithm.
+reevaluate-windows:
+  mod: mod1
+  key: z
+
+# Turn on or off focus-follows-mouse.
+toggle-focus-follows-mouse:
+  mod: mod2
+  key: x
+
+# Automatically quit and reopen Amethyst.
+relaunch-amethyst:
+  mod: mod2
+  key: z
+
+# Boolean flag for whether or not to set window margins if there is only one window on the screen, assuming window margins are enabled (default false).
+smart-window-margins: false
+
+# The smallest height that a window can be sized to regardless of its layout frame (in px, default 0).
+window-minimum-height: 0
+
+# The smallest width that a window can be sized to regardless of its layout frame (in px, default 0)
+window-minimum-width: 0
+
+# List of bundle identifiers for applications to either be automatically floating or automatically tiled based on floating-is-blacklist (default []).
+floating: []
+
+# Boolean flag determining behavior of the floating list. true if the applications should be floating and all others tiled. false if the applications should be tiled and all others floating (default true).
+floating-is-blacklist: true
+
+# true if screen frames should exclude the status bar. false if the screen frames should include the status bar (default false).
+ignore-menu-bar: false
+
+# true if windows smaller than a 500px square should be floating by default (default true)
+float-small-windows: true
+
+# true if dragging and dropping windows on to each other should swap their positions (default false).
+mouse-swaps-windows: false
+
+# true if changing the frame of a window with the mouse should update the layout to accommodate the change (default false). Note that not all layouts will be able to respond to the change.
+mouse-resizes-windows: false
+
+# true to display the name of the layout when a new layout is selected (default true).
+enables-layout-hud: true
+
+# true to display the name of the layout when moving to a new space (default true).
+enables-layout-hud-on-space-change: true
+
+# true to get updates to beta versions of the software (default false).
+use-canary-build: false
+
+# true to insert new windows into the first position and false to insert new windows into the last position (default false).
+new-windows-to-main: false
+
+# true to automatically move to a space when throwing a window to it (default true).
+follow-space-thrown-windows: true
+
+# The integer percentage of the screen dimension to increment and decrement main pane ratios by (default 5).
+window-resize-step: 5
+
+
+# true to maintain layout state across application executions (default true).
+restore-layouts-on-launch: true
+
+# true to display some optional debug information in the layout HUD (default false).
+debug-layout-info: false
