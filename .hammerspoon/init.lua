@@ -1,9 +1,9 @@
 -- Spaces and Desktop shortcuts
 -- Screen indexes might not correspond to "physical" order
 
-print(io.open(os.getenv( "HOME" ) .. "/.hammerspoon/setup", "r"))
 setupFile = io.open(os.getenv( "HOME" ) .. "/.hammerspoon/setup", "r")
 setup = setupFile:read("*all")
+
 print("Current setup ".. setup)
 if setup == "UPPLY" then
   screenMapping = { [1] = 1, [2] = 2, [3] = 3 }
