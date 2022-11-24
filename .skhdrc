@@ -11,9 +11,13 @@ ctrl + alt + cmd - 2 : echo -n UPPLY > ~/.hammerspoon/setup ; hs -c "hs.reload()
 ctrl + alt + cmd - space : yabai -m space --layout "$(yabai -m query --spaces --space | jq -r 'if .type == "bsp" then "stack" else "bsp" end')"
 
 ## Window focus
-ctrl + alt + cmd - j: yabai -m window --focus prev || yabai -m window --focus stack.prev
-ctrl + alt + cmd - k: yabai -m window --focus next || yabai -m window --focus stack.next
+ctrl + alt + cmd - j:  yabai -m window --focus prev || yabai -m window --focus stack.prev || yabai -m window --focus stack.last
+ctrl + alt + cmd - k:  yabai -m window --focus next || yabai -m window --focus stack.next || yabai -m window --focus stack.first
 
-## Window/screen focusasdf
+## Window/screen focus
 ctrl + cmd - h: yabai -m window --focus $(yabai -m query --spaces --display prev | jq '.[] | select(."is-visible" == true) | ."last-window"') || yabai -m display --focus prev
 ctrl + cmd - l: yabai -m window --focus $(yabai -m query --spaces --display next | jq '.[] | select(."is-visible" == true) | ."first-window"') || yabai -m display --focus next
+
+## Window move
+ctrl + alt + cmd - o: yabai -m window --display prev && yabai -m window --focus $(yabai -m query --spaces --display prev | jq '.[] | select(."is-visible" == true) | ."last-window"') || yabai -m display --focus prev
+ctrl + alt + cmd - p: yabai -m window --display next && yabai -m window --focus $(yabai -m query --spaces --display next | jq '.[] | select(."is-visible" == true) | ."first-window"') || yabai -m display --focus next
