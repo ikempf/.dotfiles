@@ -20,6 +20,7 @@ brew install telnet
 brew install bat
 brew install ag
 brew install htop
+brew install jq
 ```
 
 ## Dev tools
