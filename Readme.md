@@ -1,13 +1,6 @@
 # Mac setup
 
 ## Homebrew
-```
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
-brew tap caskroom/fonts
-brew tap caskroom/versions
-```
 
 ## Oh My ZSH
 ```
@@ -17,7 +10,6 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 ## Cli tools
 ```
 brew install git
-brew install tldr
 
 brew cask install java
 brew install scala
@@ -34,8 +26,6 @@ brew install htop
 ```
 brew cask install iterm2
 brew cask install font-hack
-brew cask install font-hasklig
-brew cask install font-fira-code
 brew cask install intellij-idea
 ```
 
@@ -48,11 +38,9 @@ Install vim-plug
 ```
 #brew cask install spectacle
 #brew cask install hammerspoon
-brew cask install macmediakeyforwarder
-brew cask install mtmr
 brew cask install google-chrome
-brew cask install caffeine
-brew cask install flux
+brew install koekeishiya/formulae/yabai
+brew install koekeishiya/formulae/skhd
 ```
 
 # Security
