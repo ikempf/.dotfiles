@@ -9,5 +9,6 @@ yabai -m config focus_follows_mouse autoraise
 #yabai -m rule --add app="^Google Chrome|Firefox|Safari$" space=2
 #yabai -m rule --add app="^IntelliJ IDEA$" space=3
 
-# Layouts
+# Other
 yabai -m config layout stack
+yabai -m config auto_balance on
