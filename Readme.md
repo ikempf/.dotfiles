@@ -14,6 +14,7 @@ brew install git
 brew cask install java
 brew install scala
 brew install sbt
+brew install mvn
 
 brew install telnet
 
