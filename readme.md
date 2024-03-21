@@ -22,6 +22,8 @@ brew install bat
 brew install ag
 brew install htop
 brew install jq
+
+brew install zoxide
 ```
 
 ## Dev tools
@@ -38,17 +40,10 @@ Install vim-plug
 
 ## Apps
 ```
-#brew cask install spectacle
-#brew cask install hammerspoon
-brew cask install google-chrome
+brew cask install raycast
+brew cask install brave-browser
 brew install koekeishiya/formulae/yabai
 brew install koekeishiya/formulae/skhd
-```
-
-# Security
-```
-brew cask install avast-security
-brew cask install icefloor
 ```
 
 # Checkout this repo's dotfiles
@@ -60,4 +55,5 @@ git branch --set-upstream-to=origin/master master
 ```
 
 # Other configs
-Mission control, move left/right a space
+Mac keyboard binds
+- Disable spotlight

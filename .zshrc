@@ -64,3 +64,7 @@ yabai --start-service
 
 # JMeter on M1
 alias runjmeter='JAVA_HOME=/Library/Java/JavaVirtualMachines/amazon-corretto-21.jdk/Contents/Home/ exec /opt/homebrew/Cellar/jmeter/5.6.2/libexec/bin/jmeter'
+
+# Zoxide
+export _ZO_DATA_DIR=~/.zoxide
+eval "$(zoxide init --cmd cd zsh)"
