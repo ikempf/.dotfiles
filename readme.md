@@ -11,10 +11,10 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 ```
 brew install git
 
-brew cask install java
-brew install scala
-brew install sbt
-brew install mvn
+#brew cask install java
+#brew install scala
+#brew install sbt
+#brew install mvn
 
 brew install telnet
 
@@ -24,13 +24,31 @@ brew install htop
 brew install jq
 
 brew install zoxide
+brew install secure-delete
 ```
 
 ## Dev tools
 ```
+brew cask install intellij-idea
+brew install visual-studio-code
 brew cask install iterm2
 brew cask install font-hack
-brew cask install intellij-idea
+brew install wireshark
+brew install keka
+brew install docker
+brew install azure-data-studio
+brew install postman
+```
+
+# Java tooling
+```
+Install sdkman
+sdk install gradle
+sdk install maven
+sdk install sbt
+sdk install scala
+sdk install java
+sdk install springboot
 ```
 
 ## Vim
@@ -38,13 +56,22 @@ brew cask install intellij-idea
 Install vim-plug
 ```
 
-## Apps
+## Productivity
 ```
 brew cask install raycast
-brew cask install brave-browser
 brew install koekeishiya/formulae/yabai
 brew install koekeishiya/formulae/skhd
+brew install obsidian
 ```
+
+# Apps
+```
+brew cask install brave-browser
+brew install minitorcontrol
+brew install proton-drive
+brew install protonvpn
+```
+
 
 # Checkout this repo's dotfiles
 ```

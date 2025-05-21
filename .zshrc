@@ -51,12 +51,17 @@ alias dockerRemove='dockerContainerRemove && dockerVolumeRemove'
 # Crap SBT
 alias sbtClean='rm -rf target;rm -rf project/target; rm -rf project/project/target'
 alias ssbt='(export DEV=true; export SBT_TPOLECAT_DEV=true;export JAVA_OPTS="-XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/tmp/";sbt)'
+alias ssbtd='(export DEV=true; export SBT_TPOLECAT_DEV=true;export JAVA_OPTS="-XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/tmp/";sbt -jvm-debug 5005)'
+
+# Node
+alias nnpm='export DISABLE_ESLINT_PLUGIN=true; npm'
 
 # Java
-alias J19='export JAVA_HOME=/Library/Java/JavaVirtualMachines/openjdk-19.jdk/Contents/Home'
-alias J17='export JAVA_HOME=/Library/Java/JavaVirtualMachines/openjdk-17.jdk/Contents/Home'
-alias J11='export JAVA_HOME=/Library/Java/JavaVirtualMachines/openjdk-11.jdk/Contents/Home'
-J17
+#alias J21='export JAVA_HOME=/opt/homebrew/opt/openjdk@21/'
+#alias J19='export JAVA_HOME=/Library/Java/JavaVirtualMachines/openjdk-19.jdk/Contents/Home'
+#alias J17='export JAVA_HOME=/Library/Java/JavaVirtualMachines/openjdk-17.jdk/Contents/Home'
+#alias J11='export JAVA_HOME=/Library/Java/JavaVirtualMachines/openjdk-11.jdk/Contents/Home'
+#J21
 
 # Skhd & Yabai
 skhd --start-service
@@ -68,3 +73,12 @@ alias runjmeter='JAVA_HOME=/Library/Java/JavaVirtualMachines/amazon-corretto-21.
 # Zoxide
 export _ZO_DATA_DIR=~/.zoxide
 eval "$(zoxide init --cmd cd zsh)"
+
+# Python
+# Created by `pipx` on 2025-04-17 08:00:56
+export PATH="$PATH:/Users/iljakempf/.local/bin"
+
+# SDKMAN
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"

@@ -13,8 +13,8 @@ ctrl + alt + cmd - c : yabai -m space --layout "float" && yabai -m config mouse_
 ctrl + alt + cmd - v : yabai -m space --layout "stack" && yabai -m config mouse_follows_focus on && yabai -m config focus_follows_mouse autoraise
 
 ## Window focus
-ctrl + alt + cmd - j:  yabai -m window --focus north || yabai -m window --focus stack.prev || yabai -m window --focus stack.last
-ctrl + alt + cmd - k:  yabai -m window --focus south || yabai -m window --focus stack.next || yabai -m window --focus stack.first
+ctrl + alt + cmd - j:  yabai -m window --focus south || yabai -m window --focus stack.prev || yabai -m window --focus stack.last
+ctrl + alt + cmd - k:  yabai -m window --focus north || yabai -m window --focus stack.next || yabai -m window --focus stack.first
 ctrl + alt + cmd - h:  yabai -m window --focus west
 ctrl + alt + cmd - l:  yabai -m window --focus east
 
